@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(40, 41, 56);
+}
+
+a {
+  color: rgb(234, 211, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 10px;
+}
