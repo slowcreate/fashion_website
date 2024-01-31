@@ -11,13 +11,120 @@ body {
 a {
   color: rgb(234, 211, 255);
   text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
-a:hover {
-  text-decoration: underline;
+#frontmenu li:hover,
+.grid_child:hover {
+  background-color: rgb(217, 175, 255);
 }
 
-li {
+#frontmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#frontmenu li {
   list-style: none;
-  padding-bottom: 10px;
+  background-color: rgb(189, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  margin-bottom: 8%;
+}
+
+#frontmenu li a,
+.grid_child a {
+  color: rgb(40, 41, 56);
+}
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  padding-top: 10%;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+menu {
+  text-decoration: none;
+  list-style: none;
+  padding: 4%;
+}
+menu li {
+  padding: 10px;
+}
+
+.grid_parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 400px;
+  height: 250px;
+  gap: 30px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.grid_child {
+  background-color: rgb(184, 225, 225);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  #frontmenu {
+    display: flex;
+    flex-direction: row;
+    gap: 8%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  menu a:hover {
+    text-decoration: underline;
+  }
+
+  #frontmenu a:hover {
+    text-decoration: none;
+  }
+
+  menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .grid_parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    height: 250px;
+    gap: 60px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }
