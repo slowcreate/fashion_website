@@ -89,6 +89,11 @@ menu li {
   text-align: center;
 }
 
+article {
+  background-color: aliceblue;
+  width: 400px;
+}
+
 @media (min-width: 800px) {
   #frontmenu {
     display: flex;
