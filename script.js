@@ -1,3 +1,12 @@
+// Burgermenu
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menuparent");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
 window.addEventListener("DOMContentLoaded", init);
 
 const productURL = "https://kea-alt-del.dk/t7/api/products";
