@@ -9,7 +9,7 @@ hamburger.addEventListener("click", () => {
 
 window.addEventListener("DOMContentLoaded", init);
 
-const productURL = "https://kea-alt-del.dk/t7/api/products";
+const productURL = "https://kea-alt-del.dk/t7/api/products?limit=50";
 
 let productTemplate;
 let productContainer;
@@ -55,6 +55,8 @@ function showProducts(productJSON) {
     if (product.discount) {
       console.log("discount", product);
       productClone.querySelector(".smallProduct").classList.add("onSale");
+      productClone.querySelector(".smallProduct").textContent = product.discount;
+      productClone.querySelector(".nypris").textContent = Math.floor(product.price - (product.price * product.discount) / 100);
     }
 
     const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
